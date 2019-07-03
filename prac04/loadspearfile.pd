@@ -1,17 +1,17 @@
-#N canvas 340 62 738 600 10;
+#N canvas 87 109 738 600 10;
 #X obj 50 202 list split 2;
 #X obj 200 222 list split 3;
-#X obj 212 331 unpack 0 1 2;
-#X floatatom 154 388 5 0 0 0 - - -;
-#X obj 154 408 f;
-#X obj 193 387 + 1;
-#X msg 154 367 0;
+#X obj 375 339 unpack 0 1 2;
+#X floatatom 194 352 5 0 0 0 - - -;
+#X obj 166 407 f;
+#X obj 196 405 + 1;
+#X msg 83 356 0;
 #X obj 50 266 list split 1;
 #X obj 72 311 f;
 #X floatatom 110 309 5 0 0 0 - - -;
 #X obj 63 289 select partials-count;
 #X obj 13 379 f;
-#X floatatom 21 498 5 0 0 0 - - -;
+#X floatatom 22 476 5 0 0 0 - - -;
 #X obj 13 330 select frame-count;
 #X obj 50 172 textfile;
 #X msg 50 102 rewind;
@@ -21,32 +21,32 @@
 #X text 107 172 read a line;
 #X text 137 425 time counter;
 #X text 56 250 header vars;
-#X obj 341 284 list;
-#X text 207 346 index freq mag;
+#X obj 251 337 list;
+#X text 370 354 index freq mag;
 #X obj 202 269 trigger b b l;
 #X obj 84 227 trigger l b;
-#X obj 266 369 f;
-#X obj 262 419 f;
+#X obj 429 377 f;
+#X obj 425 427 f;
 #X msg 50 55 read \$1 cr;
 #X msg 157 488 \; frqarray resize 0 \; frqarray resize \$1 \; magarray
 resize 0 \; magarray resize \$1 \;;
-#X obj 266 393 tabwrite magarray;
-#X obj 262 444 tabwrite frqarray;
+#X obj 429 401 tabwrite magarray;
+#X obj 425 452 tabwrite frqarray;
 #X obj 157 465 *;
 #X text 131 558 Size arrays as npartials x frames;
-#X obj 212 362 *;
+#X obj 375 370 *;
 #X text 357 466 values are written to entry index x frame-count + time
 ;
-#X obj 225 387 +;
+#X obj 377 423 +;
 #X text 139 199 First two items are either header fields or time and
 harmonic count;
 #X text 293 307 iterate down list processing three items at a time
 ;
 #X obj 50 33 inlet;
-#X obj 57 416 outlet;
-#X obj 87 459 outlet;
+#X obj 35 420 outlet;
+#X obj 94 518 outlet;
 #X text 41 434 partials-count;
-#X text 77 477 frame-count;
+#X text 74 530 frame-count;
 #X obj 50 78 t b a;
 #X obj 283 176 s fileread;
 #X text 350 177 tell rest of patch that new file is read;
