@@ -16,7 +16,7 @@
 #X obj 592 109 route pitch;
 #X obj 592 130 s \$0-pitch;
 #X obj 281 352 r \$0-pitch;
-#X obj 266 383 *~;
+#X obj 266 383 *~ 1;
 #X connect 0 0 17 0;
 #X connect 1 0 8 0;
 #X connect 2 0 1 0;
